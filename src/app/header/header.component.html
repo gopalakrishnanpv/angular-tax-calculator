@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div
+    class="flex flex-wrap align-center justify-around bg-gray-100 border-b-2 border-gray-200 shadow-sm pt-5 pb-3 rounded-lg sticky top-16 relative z-20">
+    <div class="flex flex-col align-center justify-center">
+        <p class="text-center font-medium text-sm flex-1">Total Income</p>
+        <p class="text-center font-bold uppercase text-2xl flex-1 text-sky-600">₹ {{totalIncome ?? 0 |
+            number}}</p>
+    </div>
+    <div class="flex flex-col align-center justify-center">
+        <p class="text-center font-medium text-sm flex-1">Total Deductions</p>
+        <p class="text-center font-bold uppercase text-2xl flex-1 text-green-600">₹
+            {{totalDeduction ?? 0 | number}}
+        </p>
+    </div>
+    <div class="flex flex-col align-center justify-center">
+        <p class="text-center font-medium text-sm flex-1">Taxable Income</p>
+        <p class="text-center font-bold uppercase text-2xl flex-1 text-pink-600">₹ {{totalTaxableIncome ?? 0 |
+            number}}
+        </p>
+    </div>
+</div>

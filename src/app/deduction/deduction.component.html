@@ -1,0 +1,30 @@
+<div class="my-5 mx-3 flex align-center justify-between">
+    <button type="button" mat-flat-button matStepperPrevious color="accent">
+        <mat-icon>arrow_backward</mat-icon>Back
+    </button>
+    <button type="button" mat-flat-button matStepperNext color="primary">Calculate
+        <mat-icon>search</mat-icon>
+    </button>
+</div>
+<form [formGroup]="deductionDetails">
+    <div class="mt-5  flex align-center justify-start flex-wrap w-full">
+        <mat-form-field appearance="outline" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-2">
+            <mat-label>Deduction from Salary </mat-label>
+            <input type="number" matInput formControlName="salary" (keyup)="updateTotalDeduction($event)">
+            <mat-error *ngIf="deductionDetails.controls['salary'].invalid && 
+          (deductionDetails.controls['salary'].dirty || 
+          deductionDetails.controls['salary'].touched)">
+                Salary deduction is required.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-2">
+            <mat-label>Deduction from Interest </mat-label>
+            <input type="number" matInput formControlName="interest" (keyup)="updateTotalDeduction($event)">
+            <mat-error *ngIf="deductionDetails.controls['interest'].invalid && 
+          (deductionDetails.controls['interest'].dirty || 
+          deductionDetails.controls['interest'].touched)">
+                Interest deduction is required.
+            </mat-error>
+        </mat-form-field>
+    </div>
+</form>

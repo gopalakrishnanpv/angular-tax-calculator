@@ -1,0 +1,51 @@
+<div class="mt-5 mx-3 flex align-center justify-end">
+    <button mat-flat-button matStepperNext color="primary">Next
+        <mat-icon>arrow_forward</mat-icon>
+    </button>
+</div>
+<form [formGroup]="basicDetails">
+    <p class="font-medium text-md">Age group</p>
+    <mat-radio-group name="ageGroupRadioGroup" [value]="ageGroups[0].value"
+        class="flex flex-col gap-3 align-center justify-center">
+        <mat-radio-button *ngFor="let ageGroup of ageGroups" [value]="ageGroup.value">
+            {{ageGroup.name}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <!-- <div class="pt-5  flex align-center justify-center flex-wrap h-60">
+        <p class="bg-indigo-600 w-full rounded-md text-white text-center align-middle">
+            Citizen
+            (0 - 60)
+        </p>
+        <p class="bg-purple-600 w-full rounded-md text-white text-center align-middle">
+            Senior
+            Citizen (60 - 80)
+        </p>
+        <p class="bg-pink-600 w-full rounded-md text-white text-center align-middle">
+            Super
+            Senior Citizen (80+)
+        </p>
+    </div> -->
+
+    <!-- <div class="flex flex-wrap align-center justify-center gap-2 w-full">
+        <button type="button"
+            class="flex flex-col justify-center items-center select-none bg-indigo-100 border-indigo-500 border-2 text-indigo-600 text-md font-medium uppercase p-2 m-2 rounded-sm shadow h-48 w-48 focus:outline-none focus:shadow-outline">
+            <mat-icon class="w-full mb-5 scale-[2.0]">directions_run</mat-icon>
+            <p class="w-full">Citizen</p>
+            <p class="w-full text-sm">0 - 60 years</p>
+        </button>
+        <button type="button"
+            class="flex flex-col justify-center items-center select-none border-2 bg-gray-100 border-gray-300 text-md font-medium uppercase p-2 m-2 rounded-sm shadow h-48 w-48 focus:outline-none focus:shadow-outline">
+            <mat-icon class="w-full mb-5 scale-[2.0]">man</mat-icon>
+            <p class="w-full">Senior Citizen</p>
+            <p class="w-full text-sm">60 - 80 years</p>
+
+        </button>
+        <button type="button"
+            class="flex flex-col justify-center items-center select-none border-2 bg-gray-100 border-gray-300 text-md font-medium uppercase p-2 m-2 rounded-sm shadow h-48 w-48 focus:outline-none focus:shadow-outline">
+            <mat-icon class="w-full mb-5 scale-[2.0]">elderly</mat-icon>
+            <p class="w-full">Super Senior Citizen</p>
+            <p class="w-full text-sm">80+ years</p>
+        </button>
+    </div> -->
+
+</form>

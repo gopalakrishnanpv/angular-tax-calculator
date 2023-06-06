@@ -1,0 +1,33 @@
+<div class="mx-5 mt-2">
+    <mat-stepper [linear]="isLinear" #stepper orientation="horizontal">
+        <mat-step label="Basic Details" #basic_details>
+            <ng-container *ngIf="stepper.selected == null || stepper.selected == basic_details">
+                <app-basic></app-basic>
+            </ng-container>
+        </mat-step>
+        <mat-step label="Income Details" #income_details>
+            <ng-container *ngIf="stepper.selected == income_details">
+                <app-income></app-income>
+            </ng-container>
+        </mat-step>
+        <mat-step label="Deduction Details" #deduction_details>
+            <ng-container *ngIf="stepper.selected == deduction_details">
+                <app-deduction></app-deduction>
+            </ng-container>
+
+        </mat-step>
+        <mat-step label="Summary" #summary_details>
+            <ng-container *ngIf="stepper.selected == summary_details">
+                <app-summary></app-summary>
+                <div class="my-5 flex align-center justify-center gap-3">
+                    <button mat-flat-button color="accent" matStepperPrevious>
+                        <mat-icon>arrow_backward</mat-icon>Back
+                    </button>
+                    <button mat-flat-button color="primary" (click)="stepper.reset()">Recalculate
+                        <mat-icon>refresh</mat-icon>
+                    </button>
+                </div>
+            </ng-container>
+        </mat-step>
+    </mat-stepper>
+</div>
