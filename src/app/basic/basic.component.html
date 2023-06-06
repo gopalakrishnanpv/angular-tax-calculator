@@ -1,9 +1,4 @@
-<div class="mt-5 mx-3 flex align-center justify-end">
-    <button mat-flat-button matStepperNext color="primary">Next
-        <mat-icon>arrow_forward</mat-icon>
-    </button>
-</div>
-<form [formGroup]="basicDetails">
+<form [formGroup]="basicDetails" class="mt-3">
     <p class="font-medium text-md">Age group</p>
     <mat-radio-group name="ageGroupRadioGroup" [value]="ageGroups[0].value"
         class="flex flex-col gap-3 align-center justify-center">
@@ -11,6 +6,11 @@
             {{ageGroup.name}}
         </mat-radio-button>
     </mat-radio-group>
+    <div class="mt-5 flex align-center justify-center gap-5">
+        <button mat-flat-button matStepperNext color="primary">Next
+            <mat-icon>arrow_downward</mat-icon>
+        </button>
+    </div>
     <!-- <div class="pt-5  flex align-center justify-center flex-wrap h-60">
         <p class="bg-indigo-600 w-full rounded-md text-white text-center align-middle">
             Citizen

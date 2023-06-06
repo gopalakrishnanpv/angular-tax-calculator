@@ -1,5 +1,5 @@
-<div class="mx-5 mt-2">
-    <mat-stepper [linear]="isLinear" #stepper orientation="horizontal">
+<div>
+    <mat-stepper [linear]="isLinear" #stepper orientation="vertical">
         <mat-step label="Basic Details" #basic_details>
             <ng-container *ngIf="stepper.selected == null || stepper.selected == basic_details">
                 <app-basic></app-basic>
@@ -21,7 +21,7 @@
                 <app-summary></app-summary>
                 <div class="my-5 flex align-center justify-center gap-3">
                     <button mat-flat-button color="accent" matStepperPrevious>
-                        <mat-icon>arrow_backward</mat-icon>Back
+                        <mat-icon>arrow_upward</mat-icon>Previous
                     </button>
                     <button mat-flat-button color="primary" (click)="stepper.reset()">Recalculate
                         <mat-icon>refresh</mat-icon>
